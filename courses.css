@@ -1,0 +1,63 @@
+@import url(//db.onlinewebfonts.com/c/0b9856633d4311a19df074ea509d8390?family=Constantia);
+@font-face {
+    font-family: "Constantia";
+    src: url("//db.onlinewebfonts.com/t/0b9856633d4311a19df074ea509d8390.eot");
+    src: url("//db.onlinewebfonts.com/t/0b9856633d4311a19df074ea509d8390.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/0b9856633d4311a19df074ea509d8390.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/0b9856633d4311a19df074ea509d8390.woff") format("woff"), url("//db.onlinewebfonts.com/t/0b9856633d4311a19df074ea509d8390.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/0b9856633d4311a19df074ea509d8390.svg#Constantia") format("svg");
+}
+
+body {
+    font-family: "Constantia", sans-serif;
+}
+
+.nufypet,
+.sat,
+.nis,
+.unt {
+    display: none;
+}
+
+a {
+    font-size: 150%;
+    font-weight: bolder;
+}
+
+table a {
+    padding: 15px 30px;
+}
+
+p,
+li {
+    font-size: 150%;
+}
+
+.card-header {
+    background-color: #FAC035;
+}
+
+h3 {
+    color: black;
+    font-weight: bolder;
+}
+
+.table {
+    background-color: rgba(255, 255, 255, 0.541);
+}
+
+.btn {
+    font-size: 200%;
+    width: 100%;
+}
+
+td,
+h3 {
+    text-align: center;
+}
+
+.right {
+    background-color: rgba(255, 255, 255, 0.541);
+}
+
+.inline {
+    width: auto;
+    font-size: 1.5rem;
+}

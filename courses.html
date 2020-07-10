@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QWERTY Academy Courses</title>
+
+
+    <script src="https://kit.fontawesome.com/f1c5f32f5c.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="courses.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="//db.onlinewebfonts.com/c/0b9856633d4311a19df074ea509d8390?family=Constantia" rel="stylesheet" type="text/css" />
+
+</head>
+<script>
+    function leaveCourses(a) {
+        ielts = document.getElementsByClassName("ielts");
+        nufypet = document.getElementsByClassName("nufypet");
+        sat = document.getElementsByClassName("sat");
+        unt = document.getElementsByClassName("unt");
+        nis = document.getElementsByClassName("nis");
+
+        if (a != "ielts") {
+            makeInvisible(ielts);
+        }
+        if (a != "nufypet") {
+            makeInvisible(nufypet);
+        }
+        if (a != "sat") {
+            makeInvisible(sat);
+        }
+        if (a != "nis") {
+            makeInvisible(nis);
+        }
+        if (a != "unt") {
+            makeInvisible(unt);
+        }
+        objs = document.getElementsByClassName(a);
+        for (i = 0; i < objs.length; i++) {
+            objs[i].style.display = "block";
+        }
+
+        function makeInvisible(course) {
+            for (i = 0; i < course.length; i++) {
+                course[i].style.display = "none";
+
+            }
+        }
+    }
+</script>
+
+<body>
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+
+            <div class="col-sm-12 col-lg-2 m-0 p-0" style="background-color: #DFE0DF;">
+                <table class="table table-hover center">
+
+                    <tbody>
+                        <tr>
+                            <td class="centered"><a type="button" onclick=" leaveCourses( 'ielts') ">IELTS</a></td>
+
+
+
+                        </tr>
+                        <tr>
+                            <td><a type="button" width="100%" onclick="leaveCourses( 'nufypet') ">NUFYPET
+                        </a></td>
+
+                        </tr>
+                        <tr>
+                            <td><a type="button" onclick="leaveCourses( 'nis') ">НИШ
+                        </a></td>
+
+                        </tr>
+                        <tr>
+                            <td><a type="button" onclick="leaveCourses( 'unt') ">ЕНТ
+                        </a></td>
+
+                        </tr>
+                        <tr>
+                            <td> <a type="button" onclick="leaveCourses( 'sat') ">SAT</a></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+            <div class="col-sm-12 col-lg-7 container-fluid p-30 m-0" style="background-color: #DFE0DF;">
+                <div class="ielts" id="accordion">
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                                <h3>
+                                    Что такое IELTS?
+                                </h3>
+                            </a>
+                        </div>
+                        <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <p><a href="https://www.ielts.org/" target="blank">IELTS</a> и <a href="https://www.ets.org/toefl" target="blank">TOEFL</a> являются международными стандартизированными тестами на знание английского языка для не носителей
+                                    языка. Хотя оба эти теста широко известны во всем мире, и сертификаты обоих тестов общеприняты, некоторые университеты США могут требовать TOEFL, а некоторые в Европе - IELTS сертификат. <br> Оба теста состоят из 4
+                                    секций: <b>Listening, Reading, Writing и Speaking</b>; в обоих тестах кандидаты могут выбирать между электронной и бумажной версиями теста.</p>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseTwo">
+                                <h3>
+                                    О нашем курсе подготовки к IELTS
+                                </h3>
+                            </a>
+                        </div>
+                        <div id="collapseTwo" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Наша программа обучения по IELTS и TOEFL предназначена для тех, кто имеет определенный уровень английского языка и хочет поступить в университет с английским языком обучения и мы нацелены подготовить их к Academic IELTS/
+                                    TOEFL. Если вы также хотите учиться в англоязычном университете и хотите сдать IELTS успешно, то вы по адресу. Зарегистрируйтесь на нашу программу обучения по IELTS/TOEFL прямо сейчас и станьте на шаг ближе к своей
+                                    цели!
+                                </p>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseThree">
+                                <h3>
+                                    Уроки IELTS
+                                </h3>
+                            </a>
+                        </div>
+                        <div id="collapseThree" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Для успешной сдачи IELTS/TOEFL необходимо тщательно изучить формат экзамена и рекомендуется практиковаться каждый день. Поэтому, для покрытия большего количества материала за меньший срок, наши преподаватели фокусируются
+                                    на разбор структуры секций и практику на уроке одинаковое количество времени. Практика реального теста задается на дом и на уроке разбираются непонятные моменты и эссе. Уроки также включают работу в группах. Например,
+                                    студенты будут читать сочинения друг друга, а потом будут давать комментарии.</p>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseFour">
+                                <h3>
+                                    Как построены наши уроки:
+                                </h3>
+                            </a>
+                        </div>
+                        <div id="collapseFour" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>
+                                    <ol>
+                                        <li><b>Уникальный учебный план. </b>Наши интерактивные классы помогут студентам легко запомнить структуру экзамена и все прилегающие детали, на которые стоит обращать внимания для успешной сдачи.
+                                        </li>
+                                        <li>
+                                            <b>Нестандартный подход.</b>Мы изначально выявляем пробелы ученика в знаниях английского и работаем над восполнением этих упущений.
+
+                                        </li>
+                                        <li>
+                                            <b>Постоянный контакт с родителями.</b>Мы всегда держим родителей о прогрессе их ребенка. Они будут знать как их ребенок выполняет домашние задания и как успешно усваивает материал.
+
+                                        </li>
+
+                                    </ol>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseFive">
+                                <h3>
+                                    Обучаясь у нас школьным предметам, вы сможете:
+                                </h3>
+                            </a>
+                        </div>
+                        <div id="collapseFive" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <ol>
+                                    <li>узнать о важных фактах каждой секции IELTS/TOEFL и как они оцениваются;</li>
+                                    <li>
+                                        развить навыки, необходимые для улучшения результата IELTS/TOEFL;</li>
+                                    <li>
+                                        изучать разные типы задач, которые вам нужно выполнить в IELTS/TOEFL, и эффективно готовиться к ним на практике;</li>
+                                    <li>
+                                        получить доступ к огромному количеству пробных тестов получить советы о том, как правильно и эффективно использовать свое время;</li>
+
+
+                                </ol>
+
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#">
+                                <h3>
+                                    Наши преподаватели:
+                                </h3>
+                            </a>
+
+                        </div>
+                        <br>
+                        <div id="collapseSix" class="collapse show" data-parent="#accordion">
+                            <div class="card-deck ">
+
+
+                                <div class="card bg-warning">
+                                    <div class="card-body text-center">
+                                        <div class="container" max-height="350px">
+                                            <img class="rounded-circle" width="100%" src="images/Мохира Аташикова.JPEG" alt="Mokhira Atashikova">
+                                        </div>
+
+
+                                        <h3 class="card-title">Мохира Аташикова</h3>
+                                        <p>
+                                            <em>преподаватель IELTS</em>
+                                        </p>
+                                        <p class=" card-text ">Студент 3 курса Назарбаев Университета по специальности Компьютерная наука. <br>Обладатель знака «Алтын Белгi»</p>
+
+
+                                    </div>
+                                </div>
+                                <div class="card bg-warning ">
+                                    <div class="card-body text-center ">
+                                        <div class="container m-10 " max-height="350px ">
+                                            <img class="rounded-circle " width="100% " src="# " alt="Dilnoza Abdurakhimova ">
+                                        </div>
+
+
+                                        <h4 class="card-title ">Дильноза Абдурахимова</h4>
+                                        <p class="card-text ">Some example text.</p>
+
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="nufypet " id="accordion">
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                                <h3>
+                                    NUFYPET
+                                </h3>
+                            </a>
+                        </div>
+                        <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Программа обучения по подготовке <b>NUFYPET –</b> это специально разработанная программа опытными преподавателями QWERTY ACADEMY, подготавливающая учащихся 9-10-11 классов для вступительных экзаменов Назарбаев Университет
+                                    по программе Foundation. <br> <br> Программа включает в себя 2 предмета <b><em>математика и навыки мышления.</em></b> Обучаясь по этой программе и приложив достаточно усилий, вы станете студентом престижнейшего университета
+                                    Центральной Азии и не только! <br> Каждый урок состоит из двух частей: <b><em>теории и практики.</em></b> Первая половина урока фокусируется на теории, после - теория закрепляется практикой. В конце каждого урока проводится
+                                    Q&A session, где студент может задавать интересующие его/ее вопросы по темам. Для создания уроков были приложены огромные усилия, чтобы студентам было легко и интересно осваивать темы.</p>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseTwo">
+                                <h3>
+                                    Как построены наши уроки:
+                                </h3>
+                            </a>
+                        </div>
+                        <div id="collapseTwo" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <ol>
+                                    <li>
+                                        <b>Огромная база. </b>Для создания уроков использовались материалы из нескольких книг. Также в базе пробных тестов находится более 100 тестов по критическому мышлению и по математике.
+
+                                    </li>
+                                    <li>
+                                        <b>Индивидуальный подход к каждому ученику.</b>Наша главная задача обеспечить каждого ученика нужными знаниями и навыками для поступления в Назарбаев Университет. Плюс к этому наши преподаватели помогут студентам
+                                        от регистрации на тестирование в Назарбаев Университет, до сдачи документов в сам университет после успешной сдачи экзамена.
+
+                                    </li>
+                                    <li>
+                                        <b>Закрепление каждого пройденного урока.</b> Уроки по подготовке к NUFYPET в QA начинаются с повторением пройденного материала и заканчиваются c закреплением новой темы.
+
+                                    </li>
+                                </ol>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseThree">
+                                <h3>
+                                    Обучаясь у нас по программе подготовки в Назарбаев Университет, вы сможете:
+                                </h3>
+                            </a>
+                        </div>
+                        <div id="collapseThree" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <ol>
+                                    <li>Получить доступ к огромному количеству пробных тестов
+                                    </li>
+                                    <li>Улучшить свои знания по математике и логике
+                                    </li>
+                                    <li>Открыть для себя новый предмет как Навыки Мышления
+                                    </li>
+                                    <li>Успешно пройти отборочный этап в НУ
+                                    </li>
+                                    <li>И стать студентом университета имеющий огромные перспективы
+                                    </li>
+                                </ol>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#">
+                                <h3>
+                                    Наши преподаватели
+                                </h3>
+                            </a>
+                        </div>
+                        <br>
+                        <div id="collapseFour" class="collapse show" data-parent="#accordion">
+                            <div class="card-deck ">
+
+
+                                <div class="card bg-warning">
+                                    <div class="card-body text-center">
+                                        <div class="container" max-height="350px">
+                                            <img class="rounded-circle" width="100%" src="images/Умиджан Рахманкулов.jpg" alt="Umidzhan Rakhmankulov ">
+                                        </div>
+
+
+                                        <h3 class="card-title">Умиджон Рахманкулов</h3>
+                                        <p>
+                                            <em>математика</em>
+                                        </p>
+                                        <p class=" card-text ">Студент 4 курса Назарбаев Университета по специальности Экономика.<br>Обладатель знака «Алтын Белгi»</p>
+
+
+                                    </div>
+                                </div>
+                                <div class="card bg-warning ">
+                                    <div class="card-body text-center ">
+                                        <div class="container m-10 " max-height="350px ">
+                                            <img class="rounded-circle " width="100% " src="images/Мафтуна Жорабекова.jpg" alt="Maftuna Zhorabekova">
+                                        </div>
+
+
+                                        <h3 class="card-title ">Жорабекова Мафтуна</h3>
+                                        <p><em>навыки мышления (критическое мышление)</em></p>
+                                        <p class="card-text ">Студент 2 курса Назарбаев Университета по специальности Лингвистика. <br> Обладатель знака «Алтын Белгi»</p>
+
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="nis" id="accordion">
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                                <h3>
+                                    НИШ (Назарбаев Интеллектуальная Школа)
+                                </h3>
+                            </a>
+                        </div>
+                        <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Сегодня мечта многих школьников – это поступление в НИШ. НИШ – это школы нового формата, где образовательные программы разработаны в соответствии современным моделям преподавания. Учеба в НИШ является некой путевкой в жизнь,
+                                    так как в среднем выпускники НИШ имеют больше шансов учиться в лучших отечественных и зарубежных вузах. Поступить в НИШ достаточно сложно – даже преуспевающие учащиеся в общеобразовательных школах не проходят отбор.
+                                    Дело в том, что уроки в традиционных школах сильно отличаются от тех в НИШ, где большое значение уделяется на критическое и логическое мышления. Того же требуют задания на экзамене при поступлении в НИШ, поэтому чтобы
+                                    поступить в НИШ, необходима правильная и весьма серьёзная подготовка. По специально подготовленной программе подготовки к НИШ в Qwerty Academy мы подготовим вашего ребенка к успешной сдаче экзаменов – они научатся основным
+                                    методам прохождения экзаменов и в короткое время получат большой объем знаний по математике и английскому языку.
+                                </p>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseTwo">
+                                <h3>
+                                    По окончании курса ваш ребенок сможет:
+                                </h3>
+                            </a>
+                        </div>
+                        <div id="collapseTwo" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <ol>
+                                    <li>
+                                        Решать все задачи вступительных экзаменов НИШ, включая задачи на пространственное мышление и логику
+
+                                    </li>
+                                    <li>Читать быстро и выборочно – метод для быстрого нахождения нужной информации среди большого объема информации
+                                    </li>
+                                    <li>
+                                        Мыслить логически и критически
+
+                                    </li>
+                                    <li>
+                                        Говорить и писать лучше на английском языке
+                                    </li>
+                                    <li>
+                                        Решать комплексные логические задачи по математике
+
+                                    </li>
+
+                                </ol>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#">
+                                <h3>
+                                    Наши преподаватели
+                                </h3>
+                            </a>
+                        </div>
+                        <br>
+                        <div id="collapse3" class="collapse show" data-parent="#accordion">
+                            <div class="card-deck">
+                                <div class="card bg-warning ">
+                                    <div class="card-body text-center ">
+                                        <div class="container m-10 " max-height="350px ">
+                                            <img class="rounded-circle " width="100% " src="images/Умиджан Рахманкулов.jpg" alt="Умиджан Рахманкулов">
+                                        </div>
+
+
+                                        <h3 class="card-title ">Умиджан Рахманкулов</h3>
+                                        <p><em>Математика и количественные характеристики</em></p>
+                                        <p class="card-text ">Опыт работы с 2016 года. <br> Студент 4 курса Назарбаев Университета, Экономика<br> Обладатель знака «Алтын Белгi»</p>
+
+
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="card bg-warning ">
+                                    <div class="card-body text-center ">
+                                        <div class="container m-10 " max-height="350px ">
+                                            <img class="rounded-circle " width="100% " src="#" alt="Nigara">
+                                        </div>
+
+
+                                        <h3 class="card-title ">Нигара Юнусова</h3>
+                                        <p><em>английский язык</em></p>
+                                        <p class="card-text ">текст</p>
+
+
+                                    </div>
+                                </div>
+                                <div class="card bg-warning ">
+                                    <div class="card-body text-center ">
+                                        <div class="container m-10 " max-height="350px ">
+                                            <img class="rounded-circle " width="100% " src="images/Алина Маркова.jpg" alt="Алина">
+                                        </div>
+
+
+                                        <h3 class="card-title ">Алина Маркова</h3>
+                                        <p><em>русский язык</em></p>
+                                        <p class="card-text ">Студент 3 курса Назарбаев Университета по специальности Лингвистика. <br> Обладатель знака «Алтын Белгi»</p>
+
+
+                                    </div>
+                                </div>
+                                <div class="card bg-warning ">
+                                    <div class="card-body text-center ">
+                                        <div class="container m-10 " max-height="350px ">
+                                            <img class="rounded-circle " width="100% " src="images/Мукаддам Ханалиева.jpg" alt="Mukaddam">
+                                        </div>
+
+
+                                        <h3 class="card-title ">Мукаддам Ханалиева</h3>
+                                        <p><em>казахский язык</em></p>
+                                        <p class="card-text ">Студент 3 курса Назарбаев Университета по специальности Международные Отношения. <br> Обладатель знака «Алтын Белгi»</p>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="unt " id="accordion">
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                                <h3>
+                                    Школьные предметы
+                                </h3>
+                            </a>
+                        </div>
+                        <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Программа обучения по школьным предметам – это уникальные уроки для тех школьников, кто хочет подтянуть свои знания и выйти за рамки школьной программы. Хотите стать лучшим в классе по математике, физике, химии, русскому,
+                                    английскому и другим предметам? Тогда записывайтесь в наш образовательный центр, и мы гарантируем вам высокую академическую успеваемость!
+                                </p>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapse2">
+                                <h3>
+                                    Уроки математики, физики, химии
+                                </h3>
+                            </a>
+                        </div>
+                        <div id="collapse2" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Каждый урок состоит из двух частей: теории и практики. В первой половине урока ученики познают тему путем разбора теории, записывают теоремы и основные формулы. Во второй половине урока студенты закрепляют теорию путем
+                                    решения сложных задач. Решение каждой задачи тщательно разбирается с преподавателем, что помогает ученикам познать практичные методы решения нестандартных задач. Наши занятия по математике наполнены большим объемом
+                                    интерактива между преподавателем и учениками. Мы построили наши уроки таким образом, чтобы ученики могли эффективно осваивать математику увлекательно и быстро!
+                                </p>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapse3">
+                                <h3>
+                                    Как построены наши уроки:
+                                </h3>
+                            </a>
+                        </div>
+                        <div id="collapse3" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <ol>
+                                    <li>
+                                        <b>Уникальный учебный план.</b> Наши интерактивные классы помогут вам полюбить изучаемый предмет и получить большом объем знаний.
+
+                                    </li>
+                                    <li>
+                                        <b>Нестандартный подход.</b>Наши занятия совсем не похожи на школьные уроки. Мы поощряем свободу действий в учениках и подстраиваем уроки под личные интересы учеников.
+
+                                    </li>
+                                    <li>
+                                        <b>Постоянный контакт с родителями.</b>Мы всегда держим вас о прогрессе вашего ребенка. Вы будете знать, как он выполняет домашние задания и как успешно усваивает материал.
+
+                                    </li>
+                                </ol>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapse4">
+                                <h3>
+                                    Обучаясь у нас школьным предметам, вы сможете:
+                                </h3>
+                            </a>
+                        </div>
+                        <div id="collapse4" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <ol>
+                                    <li>Сформировать умение оперировать понятиями
+                                    </li>
+                                    <li>Думать абстрактно и критически, решать логические задачи </li>
+                                    <li>Анализировать задачу и подбирать эффективный метод решения </li>
+                                    <li>Говорить и писать конструктивно и без ошибок
+                                    </li>
+                                    <li>Преуспеть в школьной программе </li>
+                                </ol>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#">
+                                <h3>
+                                    Наши преподаватели
+                                </h3>
+                            </a>
+                        </div>
+                        <br>
+
+                        <div id="collapse5" class="collapse show" data-parent="#accordion">
+                            <div class="card-deck">
+                                <div class="card bg-warning ">
+                                    <div class="card-body text-center ">
+                                        <div class="container m-10 " max-height="350px ">
+                                            <img class="rounded-circle " width="100% " src="images/гульназ.jpg" alt="Gulnoza">
+                                        </div>
+
+
+                                        <h3 class="card-title ">Гулноза Адилметова</h3>
+                                        <p><em>химия и биология</em></p>
+                                        <p class="card-text ">Студент 3 курса Назарбаев Университета, Биология.<br> Обладатель знака «Алтын Белгi»<br>FLEX2017</p>
+
+
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="card bg-warning ">
+                                    <div class="card-body text-center ">
+                                        <div class="container m-10 " max-height="350px ">
+                                            <img class="rounded-circle " width="100% " src="images/Адхамжон.jpg" alt="Adkham">
+                                        </div>
+
+
+                                        <h3 class="card-title ">Адхамжон Юлдашов</h3>
+                                        <p><em>математика</em></p>
+                                        <p class="card-text ">Студент 3 курса Назарбаев Университета по специальности Механическая и Аэрокосмическая Инженерия. <br> Обладатель знака «Алтын Белгi»</p>
+
+
+                                    </div>
+                                </div>
+                                <div class="card bg-warning ">
+                                    <div class="card-body text-center ">
+                                        <div class="container m-10 " max-height="350px ">
+                                            <img class="rounded-circle " width="100% " src="images/шахзод.jpg" alt="Shahzod">
+                                        </div>
+
+
+                                        <h3 class="card-title ">Шахзод Хусниддинов</h3>
+                                        <p><em>физика</em></p>
+                                        <p class="card-text ">Студент 2 курса Назарбаев Университета по специальности Механическая и Аэрокосмическая Инженерия. <br> Обладатель знака «Алтын Белгi»</p>
+
+
+                                    </div>
+                                </div>
+                                <div class="card bg-warning ">
+                                    <div class="card-body text-center ">
+                                        <div class="container m-10 " max-height="350px ">
+                                            <img class="rounded-circle " width="100% " src="images/Саидгаффор.jpg" alt="Said">
+                                        </div>
+
+
+                                        <h3 class="card-title ">Саидгаффор Сабыров</h3>
+                                        <p><em>физика и математика</em></p>
+                                        <p class="card-text ">Студент 3 курса Назарбаев Университета по специальности Компьютерная Наука. <br> Обладатель знака «Алтын Белгi»</p>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="sat" id="accordion">
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapse1">
+                                <h3>
+                                    SAT
+                                </h3>
+                            </a>
+                        </div>
+                        <div id="collapse1" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Тест <b>SAT</b> (Scholastic Assessment Test) сдается для поступления в университеты США и для поступления на программы бакалавра в Назарбаев Университет. SAT – это стандартизированный тест, который выявляет уровень знаний
+                                    кандидата по точным предметам и проверяет навыки писать грамотно, что является необходимым для обучения в вузах. <br><br> Тест состоит из двух частей: <b>SAT Reasoning Test </b>(экзамен на выявление академических способностей)
+                                    и <b>SAT
+                                    Subject Test</b> (предметный тест). <br><br> В свою очередь Reasoning Test состоит из <em><b>математики, анализа текста и письма</b></em>. <br> А Subject Test состоит из пяти предметных направлений, к двум из которых
+                                    можно подготовиться у нас: <em><b>физика & математика</b></em> и <em><b>химия & биология</b></em>. <br><br> Традиционная школьная программа не подготавливает учеников к сдаче SAT экзамена, так как задачи на SAT сильно
+                                    отличаются от тех в школе. Поэтому для успешной сдачи SAT нужна правильная методика преподования и серьезная подготовка. <br><br> SAT является приоритетным направлением QWERTY Academy и наши опытные методисты подготовят
+                                    вас к этому экзамену и повысят ваши шансы на поступление в один из лучших вузов зарубежья и Казахстана!
+
+                                </p>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapse2">
+                                <h3>
+                                    По окончанию курса вы сможете:
+                                </h3>
+                            </a>
+                        </div>
+                        <div id="collapse2" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <ol>
+                                    <li>Применять на практике быстрые методы решения сложных задач
+                                    </li>
+                                    <li>Анализировать большой объем материала и быстро находить в нем нужную информацию
+                                    </li>
+                                    <li>Писать конструктивно и грамотно</li>
+                                    <li>Применять навыки критического мышления при письме и чтении
+                                    </li>
+                                    <li>Использовать сложные теоритические концепты и понятия на практике при решении задач
+                                    </li>
+                                </ol>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#">
+                                <h3>
+                                    Преподаватели программы
+                                </h3>
+                            </a>
+                        </div>
+                        <br>
+                        <div id="collapse3" class="collapse show" data-parent="#accordion">
+                            <div class="card-deck">
+                                <div class="card bg-warning ">
+                                    <div class="card-body text-center ">
+                                        <div class="container m-10 " max-height="350px ">
+                                            <img class="rounded-circle " width="100% " src="images/гульназ.jpg" alt="Gulnoza">
+                                        </div>
+
+
+                                        <h3 class="card-title ">Гулноза Адилметова</h3>
+                                        <p><em>chemistry and biology</em></p>
+                                        <p class="card-text ">Студент 3 курса Назарбаев Университета, по специальности Биология.<br> Обладатель знака «Алтын Белгi»<br>FLEX2017</p>
+
+
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="card bg-warning ">
+                                    <div class="card-body text-center ">
+                                        <div class="container m-10 " max-height="350px ">
+                                            <img class="rounded-circle " width="100% " src="images/Мукаддам Ханалиева.jpg" alt="Mukaddam">
+                                        </div>
+
+
+                                        <h3 class="card-title ">Мукаддам Ханалиева</h3>
+                                        <p><em>reading and writing</em></p>
+                                        <p class="card-text ">Студент 3 курса Назарбаев Университета по специальности Политическая Наука и Международные Отношения. <br> Обладатель знака «Алтын Белгi»</p>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="card-deck">
+                                <div class="card bg-warning ">
+                                    <div class="card-body text-center ">
+                                        <div class="container m-10 " max-height="350px ">
+                                            <img class="rounded-circle " width="100% " src="images/шахзод.jpg" alt="Shahzod">
+                                        </div>
+
+
+                                        <h3 class="card-title ">Шахзод Хусниддинов</h3>
+                                        <p><em>physics</em></p>
+                                        <p class="card-text ">Студент 2 курса Назарбаев Университета по специальности Механическая и Аэрокосмическая Инженерия. <br> Обладатель знака «Алтын Белгi»</p>
+
+
+                                    </div>
+                                </div>
+                                <div class="card bg-warning ">
+                                    <div class="card-body text-center ">
+                                        <div class="container m-10 " max-height="350px ">
+                                            <img class="rounded-circle " width="100% " src="images/Саидгаффор.jpg" alt="Said">
+                                        </div>
+
+
+                                        <h3 class="card-title ">Саидгаффор Сабыров</h3>
+                                        <p><em>physics</em></p>
+                                        <p class="card-text ">Опыт работы 3 года. <br>Студент 3 курса Назарбаев Университета по специальности Компьютерная Наука. <br> Обладатель знака «Алтын Белгi»</p>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            <div class="col-sm-12 col-lg-3 container " style='background: #DFE0DF;'>
+                <div class="container-fluid right">
+                    <br>
+                    <h3>Курс обучения
+                    </h3>
+                    <br>
+
+
+                    <article class="ielts">
+                        <ul>
+                            <li>Тестирование знаний: <b><button class="btn btn-info inline" disabled>каждые две недели</button></b>
+                                <br>
+                                <p class="blockquote-footer ">родители получают отчет об успеваемости.</p>
+                            </li>
+                            <hr>
+                            <li>Продолжительность занятий: <b><button class="btn btn-info inline" disabled>90 минут</button></b>
+                            </li>
+                            <hr>
+                            <li>Язык преподавания: <b><button class="btn btn-info inline " disabled>английский</button></b></li>
+                        </ul>
+                    </article>
+                    <article class="nufypet ">
+                        <ul>
+                            <li>Тестирование знаний: <b>после каждой пройденной темы</b>
+                            </li>
+                            <hr>
+                            <li>
+                                Продолжительность курса: <b>7 месяцев (август-февраль)</b>
+                            </li>
+                            <hr>
+                            <li>Продолжительность занятий: <b>120 минут</b></li>
+                            <hr>
+                            <li>Язык преподавания: <b>английский </b><br>
+                                <p class="blockquote-footer ">При желании студента возможно и в других доступных языках.</p>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="nis ">
+                        <ul>
+                            <li>Длительность обучения:<b> 8 месяцев (с августа по март)</b>
+                            </li>
+
+                            <hr>
+                            <li>
+                                Пробное тестирование: <b>каждые две недели</b>
+                            </li>
+
+                            <hr>
+                            <li>
+                                Расписание занятий: <b>3 раза в неделю по каждому предмету</b></li>
+
+                            <hr>
+                            <li>
+
+                                Продолжительность занятий: <b>90 минут</b>
+                            </li>
+
+                            <hr>
+                            <li>
+                                Можно выбрать <br> 1. Программу комплексной подготовки (все предметы) <br> 2. Предметы раздельно (математика, английский язык, русский язык, казахский язык)
+
+                            </li>
+
+                            <hr>
+                            <li>
+                                Языки преподавания: <b>русский, английский, казахский, узбекский</b>
+
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="unt ">
+                        <ul>
+                            <li>Тестирование знаний: <b>каждые две недели</b>
+                                <br>
+                                <p class="blockquote-footer ">родители получают отчет об успеваемости.</p>
+                            </li>
+                            <hr>
+                            <li>Продолжительность занятий: <b>80 минут</b>
+                            </li>
+                            <hr>
+                            <li>Языки преподавания: <b>русский, английский, казахский, узбекский</b>
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="sat ">
+                        <ul>
+                            <li>Длительность обученя: <b>6 месяцев (с августа по январь)</b>
+                            </li>
+                            <hr>
+                            <li>Пробное тестирование: <b>каждые две недели</b>
+                            </li>
+                            <hr>
+
+                            <li>Расписание занятий: <b>3 раза в неделю по каждому предмету</b></li>
+                            <li>
+                                Продолжительность занятий: <b>90 минут</b>
+                            </li>
+                            <li>Языки преподавания: <b>русский, английский</b>
+                            </li>
+                        </ul>
+                    </article><button class="btn btn-danger">Записаться</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js "></script>
+</body>
+
+</html>
