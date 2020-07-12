@@ -5,19 +5,31 @@
     src: url("//db.onlinewebfonts.com/t/0b9856633d4311a19df074ea509d8390.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/0b9856633d4311a19df074ea509d8390.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/0b9856633d4311a19df074ea509d8390.woff") format("woff"), url("//db.onlinewebfonts.com/t/0b9856633d4311a19df074ea509d8390.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/0b9856633d4311a19df074ea509d8390.svg#Constantia") format("svg");
 }
 
-body {
+body,
+#footer {
     font-family: "Constantia", sans-serif;
+}
+
+a {
+    text-decoration: none !important;
 }
 
 .nufypet,
 .sat,
 .nis,
-.unt {
+.unt,
+.englishKids,
+.englishAdults {
     display: none;
 }
 
-a {
-    font-size: 150%;
+.container-fluid {
+    position: relative;
+    top: 80px;
+}
+
+table a {
+    font-size: 120%;
     font-weight: bolder;
 }
 
@@ -27,7 +39,7 @@ table a {
 
 p,
 li {
-    font-size: 150%;
+    font-size: 120%;
 }
 
 .card-header {
@@ -61,3 +73,54 @@ h3 {
     width: auto;
     font-size: 1.5rem;
 }
+
+ul li {
+    position: relative;
+    overflow: hidden;
+}
+
+ol li {
+    position: relative;
+    left: 20px;
+}
+
+.table-striped td,
+th {
+    font-size: 120%;
+}
+
+.fixed {
+    position: fixed;
+    right: 0;
+    bottom: 20px;
+    width: 25%;
+    border-radius: 10px;
+}
+
+.btn-danger {
+    padding: 15px 25px;
+    /* font-size: 24px; */
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #c5193e;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px rgb(97, 96, 96);
+}
+
+.btn-danger:hover {
+    background-color: #e9b335
+}
+
+.btn-danger:active {
+    background-color: #e7b030;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+
+/* .bg-warning {
+    background-color: #FAF9F8
+} */

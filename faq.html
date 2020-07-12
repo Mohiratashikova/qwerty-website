@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <title>QWERTY Academy Team</title>
+        <link rel="icon"  type="image/png" sizes="16×16" href="images/logoicon.png">
+        
+        <link rel="stylesheet" type="text/css" href="styling.css">
+        <script src="https://kit.fontawesome.com/f1c5f32f5c.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="//db.onlinewebfonts.com/c/0b9856633d4311a19df074ea509d8390?family=Constantia" rel="stylesheet" type="text/css"/>
+        <script>history.scrollRestoration = "manual"</script>
+    </head>
+
+    <body>
+        <div class="goup" id="goupId">
+            <a href="#">
+                <i class="fas fa-chevron-up"></i>
+            </a>
+        </div>
+        
+        <div id="pulsercall">
+            <a href="#callform" id="call">
+                <i class="fa fa-phone"></i>
+            </a>
+        </div>
+        
+        <div id="header">
+            <div id="header-content">
+                <div id="brand"><a href="#"><img src="images/logo2.png"></a></div>
+            
+                <nav id="menu1">
+                    <a href="courses.html" class="menuLI">О нас</a>
+                    <a href="#courseSection" class="menuLI">Наши курсы</a>
+                    <a href="#" class="menuLI">Прайс-лист</a>
+                    <a href="#" class="menuLI">тестирование</a>
+                    <a href="#" class="menuLI">FAQ</a>
+                    <a href="#footer" class="menuLI">Контакты</a>
+                </nav>
+                <div id="icon-wrapper">
+                    <a class="icon" onclick="menuFunction()">
+                    <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <nav id="menu2">
+                <a href="courses.html" class="menuLI">О нас</a>
+                <a href="#courseSection" class="menuLI">Наши курсы</a>
+                <a href="#" class="menuLI">Прайс-лист</a>
+                <a href="#" class="menuLI">Тестирование</a>
+                <a href="#" class="menuLI">FAQ</a>
+                <a href="#footer" class="menuLI">Контакты</a>
+        </nav>
+        
+        
+        
+    </body>
+    
+    <script>
+        
+        window.onscroll = function(){shadowAndGoup();}
+        
+        function shadowAndGoup(){
+            if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+                document.getElementById("header").className = "active-header";
+            } else{
+                document.getElementById("header").className = "";
+            }
+            
+            if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
+                document.getElementById("goupId").className = "goup-active";
+            } else{
+                document.getElementById("goupId").className = "goup";
+            }
+        }
+        
+        function menuFunction(){
+            var menu= document.getElementById("menu2");
+            
+            if(menu.classList.contains("active-menu")){
+                menu.classList.remove("active-menu");
+            } else{
+                menu.classList.add("active-menu");
+            }
+        }
+    
+    </script>
+</html>

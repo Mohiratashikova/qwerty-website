@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <title>QWERTY Academy</title>
+        <link rel="icon"  type="image/png" sizes="16×16" href="images/logoicon.png">
+        
+        <link rel="stylesheet" type="text/css" href="styles/minifiedcss.css">
+        
+        <script src="https://kit.fontawesome.com/f1c5f32f5c.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="//db.onlinewebfonts.com/c/0b9856633d4311a19df074ea509d8390?family=Constantia" rel="stylesheet" type="text/css"/>
+        <script>history.scrollRestoration = "manual"</script>
+    </head>
+
+    <body>
+        <div class="goup" id="goupId">
+            <a href="#">
+                <i class="fas fa-chevron-up"></i>
+            </a>
+        </div>
+        
+        <div id="pulsercall">
+            <a href="https://bit.ly/2OhKaQZ" id="call">
+                <i class="fa fa-phone"></i>
+            </a>
+        </div>
+        
+        <div id="header">
+            <div id="header-content">
+                <div id="brand"><a href="#"><img src="images/logo2.png"></a></div>
+            
+                <nav id="menu1">
+                    <a href="team.html" class="menuLI">О нас</a>
+                    <a href="#courseSection" class="menuLI">Наши курсы</a>
+                    <a href="#" class="menuLI">Прайс-лист</a>
+                    <a href="#" class="menuLI">тестирование</a>
+                    <a href="#" class="menuLI">FAQ</a>
+                    <a href="#footer" class="menuLI">Контакты</a>
+                </nav>
+                <div id="icon-wrapper">
+                    <a class="icon" onclick="menuFunction()">
+                    <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <nav id="menu2">
+                <a href="team.html" class="menuLI">О нас</a>
+                <a href="#courseSection" class="menuLI">Наши курсы</a>
+                <a href="#" class="menuLI">Прайс-лист</a>
+                <a href="#" class="menuLI">Тестирование</a>
+                <a href="#" class="menuLI">FAQ</a>
+                <a href="#footer" class="menuLI">Контакты</a>
+        </nav>
+        
+        <div id="container">
+            <div id="mainBack">
+                <div id="mainBack-contents">
+                    <div id="mainh1div">
+                        <div>
+                            <h1>QWERTY</h1>
+                            <h1>Academy</h1>
+                        </div>
+                    </div>
+                    <div><h3 class="typewriting"></h3></div>
+                    <div class="button">
+                        <button onclick="toWhatsapp()">Записаться на курсы</button>
+                    </div>
+                </div>
+            </div>
+            <div id="courseSection">
+                <div class="header2">
+                    <h2>Наши курсы</h2>
+                </div>
+                
+                <div id="listOfCourses">
+                    <div class="courseWrapper">
+                        <div class="course" id="nufypet" onclick="toCourses()">
+                            <img src="images/nufypet.png">
+                            <p>NUFYPET</p>
+                        </div>
+                    </div>
+                    <div class="courseWrapper">
+                        <div class="course" id="sat" onclick="toCourses()">
+                            <img src="images/sat.png">
+                            <p>SAT</p>
+                        </div>
+                    </div>
+                    <div class="courseWrapper" onclick="toCourses()">
+                        <div class="course" id="ielts">
+                            <img src="images/ielts.png">
+                            <p>IELTS</p>
+                        </div>
+                    </div>
+                    <div class="courseWrapper" onclick="toCourses()">
+                        <div class="course" id="toefl">
+                            <img src="images/toefl.png">
+                            <p>TOEFL</p>
+                        </div>
+                    </div>
+                    <div class="courseWrapper" onclick="toCourses()">
+                        <div class="course" id="english">
+                            <img src="images/english.png">
+                            <p>Английский язык</p>
+                        </div>
+                    </div>
+                    <div class="courseWrapper" onclick="toCourses()">
+                        <div class="course" id="ent">
+                            <img src="images/ent.png">
+                            <p>ЕНТ</p>
+                        </div>
+                    </div>
+                    <div class="courseWrapper" onclick="toCourses()">
+                        <div class="course" id="nish">
+                            <img src="images/nish.png">
+                            <p>Подготовка в НИШ</p>
+                        </div>
+                    </div>
+                    <div class="courseWrapper" onclick="toCourses()">
+                        <div class="course" id="school">
+                            <img src="images/school.png">
+                            <p>Школьные Предметы</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="teacherSection">
+                <div class="header2">
+                    <h2>Наши преподаватели</h2>
+                </div>
+                
+                <div id="listOfTeachers">
+                    <div class="teacherWrapper">
+                        <a href="team.html#umid" style="text-decoration: none; color:white;">
+                            <div id="firstTeacher" class="teacher">
+                                <div class="teacherText"><h3>Умиджан Рахманкулов</h3></div>
+                                <div class="imgframe"></div>
+                                <div class="teacherText">
+                                    <h4>Математика</h4>
+                                    <h5>Опыт преподавания 4+ лет</h5>
+                                    <h5>Кандидат программы Chartered Financial Analyst (CFA)</h5>
+                                    <h5>Обладатель знака &laquo;Алтын белгі&raquo;</h5>
+                                </div>
+                            </div>
+                        </a>
+                        
+                    </div>
+                    
+                    <div class="teacherWrapper">
+                        <a href="team.html#mokhira" style="text-decoration: none; color:white;">
+                            <div id="secondTeacher" class="teacher" onclick="toCourses()">
+                                <div class="teacherText"><h3>Мохира Аташикова</h3></div>
+                                <div class="imgframe"></div>
+                                <div class="teacherText">
+                                    <h4>Математика и английский язык</h4>
+                                    <h5>Опыт преподавания 3+ лет</h5>
+                                    <h5>Студент 3 курса Назарбаев Университета по специальности Компьютерная наука</h5>
+                                    <h5>Обладатель знака &laquo;Алтын белгі&raquo;</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="teacherWrapper">
+                        <a href="team.html#said" style="text-decoration: none; color:white;">
+                            <div id="thirdTeacher" class="teacher" onclick="toCourses()">
+                                <div class="teacherText"><h3>Саидгаффор Сабыров</h3></div>
+                                <div class="imgframe"></div>
+                                <div class="teacherText">
+                                    <h4>Физика и математика</h4>
+                                    <h5>Опыт преподавания 3+ лет</h5>
+                                    <h5>Студент 3 курса Назарбаев Университета по специальности Компьютерная наука</h5>
+                                    <h5>Занимается исследовательскими работами в сфере Deep Learning and Computer Vision</h5>
+                                    <h5>Обладатель знака &laquo;Алтын белгі&raquo;</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="teacherWrapper">
+                        <a href="team.html#maftuna" style="text-decoration: none; color:white;">
+                            <div id="fourthTeacher" class="teacher" onclick="toCourses()">
+                                <div class="teacherText"><h3>Мафтуна Жорабекова</h3></div>
+                                <div class="imgframe"></div>
+                                <div class="teacherText">
+                                    <h4>Критическое мышление</h4>
+                                    <h5>Опыт преподавания 3+ лет</h5>
+                                    <h5>Студент 3 курса Назарбаев Университета по специальности Лингвистика</h5>
+                                    <h5>Обладатель знака &laquo;Алтын белгі&raquo;</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="teacherWrapper">
+                        <a href="team.html#mukaddam" style="text-decoration: none; color:white;">
+                            <div id="fifthTeacher" class="teacher" onclick="toCourses()">
+                                <div class="teacherText"><h3>Мукаддам Ханалиева</h3></div>
+                                <div class="imgframe"></div>
+                                <div class="teacherText">
+                                    <h4>Английский язык</h4>
+                                    <h5>Опыт преподавания 3+ лет</h5>
+                                    <h5>Студент 3 курса Назарбаев Университета по специальности Политическая наука и международные отношения</h5>
+                                    <h5>Обладатель знака &laquo;Алтын белгі&raquo;</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="teacherWrapper">
+                        <a href="#" style="text-decoration: none; color:white;">
+                            <div id="sixthTeacher" class="teacher" onclick="toCourses()">
+                                <div class="teacherText"><h3>Гульназ Адилметова</h3></div>
+                                <div class="imgframe"></div>
+                                <div class="teacherText">
+                                    <h4>Химия и биология</h4>
+                                    <h5>Опыт преподавания 3+ лет</h5>
+                                    <h5>Студент 3 курса Назарбаев Университета по специальности Биология</h5>
+                                    <h5>Обладатель знака &laquo;Алтын белгі&raquo;</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            <div id="callform">
+                <div id="callform-contents">
+                    <h2>Для получения консультации о наших услугах, свяжитесь с нашим менеджером</h2>
+                    <h3>Мы перезвоним вам в течении 5 минут!</h3>
+                    <div>
+                        <form id="main_form" method="post" action="http://qwerty.eldor.kz/admin/collections/studentapplication/add">
+                            <div id="nameAndPhone">
+                                <div>
+                                    <input type="text" name="name" class="textinput" placeholder="Введите имя">
+                                </div>
+                                
+                                <div>
+                                    <input type="tel" name="phone" class="textinput" placeholder="Введите номер телефона*">
+                                </div>
+                                <div>
+                                    <input type="email" name="email" class="textinput" placeholder="Введите адрес эл. почты">
+                                </div>
+                            </div>
+                            <div id="politics">
+                                <input type="checkbox" id="checkbox">
+                                <label>Я согласен/-на с <span id="politicsPdf" onclick="openPdf('docs/politicsOfConf.pdf')">политикой конфиденциальности</span></label>
+                            </div>
+                            <div class="yellowButton">
+                                <input type="submit" value="Отправить">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <footer id ="footer">
+                <div id="footer-contents">
+                    <div>
+                        <img src="images/logo3.png" id="footerLogo">
+                    </div>
+                    <div id="contacts">
+                        <div><h4>Контакты</h4></div>
+                        <div>
+                            <div id="contactInfo">
+                                <div id="contactInfoWrap">
+                                    <h5>+7 (747) 739 83 01</h5>
+                                    <h5>+7 (747) 485 15 84</h5>
+<!--                                    <h5>qwerty-academy@gmail.com</h5>-->
+                                </div>
+                            </div>
+
+                            <div id="socialNet">
+                                <a class="social" href="https://bit.ly/2OhKaQZ">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                                <a class="social" href="#">
+                                    <i class="fab fa-telegram"></i>
+                                </a>
+                                <a class="social" href="https://www.instagram.com/qwerty_academy/">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a class="social" href="#">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                
+                <h6>Qwerty Academy. 2020 &copy;</h6>
+            </footer>
+        </div>
+    </body>
+    
+    
+    
+    <script type="text/javascript">
+        jQuery(document).ready(function(){
+            typing();
+        });
+        
+        window.onscroll = function(){shadowAndGoup();}
+        
+        function shadowAndGoup(){
+            if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+                document.getElementById("header").className = "active-header";
+            } else{
+                document.getElementById("header").className = "";
+            }
+            
+            if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
+                document.getElementById("goupId").className = "goup-active";
+            } else{
+                document.getElementById("goupId").className = "goup";
+            }
+        }
+        
+        function menuFunction(){
+            var menu= document.getElementById("menu2");
+            
+            if(menu.classList.contains("active-menu")){
+                menu.classList.remove("active-menu");
+            } else{
+                menu.classList.add("active-menu");
+            }
+        }
+        
+        function typing(){
+            var content = 'Привет, друг! Добро пожаловать в Qwerty Academy! Мы делаем качественное образование доступным и помогаем достигать высокие цели!';
+
+            var spans = '<span>' + content.split('').join('</span><span>') + '</span>';
+
+            $(spans).hide().appendTo('.typewriting').each(function (i) {
+                $(this).delay(70 * i).css({
+                    display: 'inline',
+                    opacity: 0
+                }).animate({
+                    opacity: 1
+                }, 100);
+            });
+        }
+        
+        function toCourses(){
+            window.location = "http://www.qwertyacademy.kz/courses.html"
+        }
+        
+        function toWhatsapp(){
+            window.location = "https://bit.ly/2OhKaQZ"
+        }
+        
+        function openPdf(url){
+            var w=window.open(url, '_blank');
+            w.focus();
+        }
+
+        $("#main_form").submit(function(e){
+            var success_message = 'Ваш запрос успешно отправлено, Спасибо Вам за интерес';
+            var error_message = 'Вы не потдвердили политику конфиденциальности';
+            var is_checked_agree_btn = $('#checkbox').prop('checked');
+            if (is_checked_agree_btn){
+                var sendind_data = {
+                    'name': $('[name="name"]').val(), 
+                    'email': $('[name="email"]').val(), 
+                    'phone': $('[name="phone"]').val(), 
+                    'is_agree': 1,
+                }
+                $.ajax({
+                  type: "POST",
+                  url: 'http://qwerty.eldor.kz/admin/collections/studentapplication/add',
+                  data: sendind_data,
+                  success: function(){ alert(success_message) },
+                  dataType: 'json'
+                });
+            }else{
+                alert(error_message);
+            }
+            e.preventDefault();
+        });
+
+        
+        
+    </script>
+</html>

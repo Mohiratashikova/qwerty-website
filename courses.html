@@ -7,14 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QWERTY Academy Courses</title>
 
+    <link rel="stylesheet" type="text/css" href="styles/minifiedcss.css">
 
+
+    <script>
+        history.scrollRestoration = "manual"
+    </script>
     <script src="https://kit.fontawesome.com/f1c5f32f5c.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="courses.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="//db.onlinewebfonts.com/c/0b9856633d4311a19df074ea509d8390?family=Constantia" rel="stylesheet" type="text/css" />
-
+    <link rel="stylesheet" type="text/css" href="styles/courses.css">
 </head>
 <script>
     function leaveCourses(a) {
@@ -23,7 +28,8 @@
         sat = document.getElementsByClassName("sat");
         unt = document.getElementsByClassName("unt");
         nis = document.getElementsByClassName("nis");
-
+        englishKids = document.getElementsByClassName("englishKids");
+        englishAdults = document.getElementsByClassName("englishAdults");
         if (a != "ielts") {
             makeInvisible(ielts);
         }
@@ -39,6 +45,13 @@
         if (a != "unt") {
             makeInvisible(unt);
         }
+        if (a != "englishKids") {
+            makeInvisible(englishKids);
+        }
+        if (a != "englishAdults") {
+            makeInvisible(englishAdults);
+        }
+
         objs = document.getElementsByClassName(a);
         for (i = 0; i < objs.length; i++) {
             objs[i].style.display = "block";
@@ -54,6 +67,50 @@
 </script>
 
 <body>
+
+
+    <div id="header">
+        <div id="header-content">
+            <div id="brand">
+                <a href="/"><img src="images/logo2.png"></a>
+            </div>
+
+            <nav id="menu1">
+                <a href="team.html" class="menuLI">О нас</a>
+                <a href="courses.html" class="menuLI">Наши курсы</a>
+                <a href="#" class="menuLI">Прайс-лист</a>
+                <a href="#" class="menuLI">тестирование</a>
+                <a href="#" class="menuLI">FAQ</a>
+                <a href="#footer" class="menuLI">Контакты</a>
+            </nav>
+            <div id="icon-wrapper">
+                <a class="icon" onclick="menuFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <nav id="menu2">
+        <a href="team.html" class="menuLI">О нас</a>
+        <a href="courses.html" class="menuLI">Наши курсы</a>
+        <a href="#" class="menuLI">Прайс-лист</a>
+        <a href="#" class="menuLI">Тестирование</a>
+        <a href="#" class="menuLI">FAQ</a>
+        <a href="#footer" class="menuLI">Контакты</a>
+    </nav>
+
+    <script>
+        function menuFunction() {
+            var menu = document.getElementById("menu2");
+
+            if (menu.classList.contains("active-menu")) {
+                menu.classList.remove("active-menu");
+            } else {
+                menu.classList.add("active-menu");
+            }
+        }
+    </script>
 
     <div class="container-fluid">
 
@@ -71,22 +128,30 @@
 
                         </tr>
                         <tr>
-                            <td><a type="button" width="100%" onclick="leaveCourses( 'nufypet') ">NUFYPET
+                            <td><a id="nufypet" type="button" width="100%" onclick="leaveCourses( 'nufypet') ">NUFYPET (Поступление в НУ)
                         </a></td>
 
                         </tr>
                         <tr>
-                            <td><a type="button" onclick="leaveCourses( 'nis') ">НИШ
+                            <td><a type="button" onclick="leaveCourses( 'nis') ">Поступление в НИШ 
                         </a></td>
 
                         </tr>
                         <tr>
-                            <td><a type="button" onclick="leaveCourses( 'unt') ">ЕНТ
+                            <td><a type="button" onclick="leaveCourses( 'unt') ">Подготовка к ЕНТ 
                         </a></td>
 
                         </tr>
                         <tr>
-                            <td> <a type="button" onclick="leaveCourses( 'sat') ">SAT</a></td>
+                            <td> <a type="button" onclick="leaveCourses( 'sat') ">SAT (Поступление в НУ)</a></td>
+
+                        </tr>
+                        <tr>
+                            <td> <a type="button" onclick="leaveCourses( 'englishKids') ">Английский для детей</a></td>
+
+                        </tr>
+                        <tr>
+                            <td> <a type="button" onclick="leaveCourses( 'englishAdults') ">Английский для взрослых</a></td>
 
                         </tr>
                     </tbody>
@@ -94,7 +159,7 @@
 
             </div>
 
-            <div class="col-sm-12 col-lg-7 container-fluid p-30 m-0" style="background-color: #DFE0DF;">
+            <div class="col-sm-12 col-lg-7  p-30 m-0" style="background-color: #DFE0DF;">
                 <div class="ielts" id="accordion">
                     <div class="card">
                         <div class="card-header">
@@ -104,7 +169,7 @@
                                 </h3>
                             </a>
                         </div>
-                        <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                        <div id="collapseOne" class="collapse show active" data-parent="#accordion">
                             <div class="card-body">
                                 <p><a href="https://www.ielts.org/" target="blank">IELTS</a> и <a href="https://www.ets.org/toefl" target="blank">TOEFL</a> являются международными стандартизированными тестами на знание английского языка для не носителей
                                     языка. Хотя оба эти теста широко известны во всем мире, и сертификаты обоих тестов общеприняты, некоторые университеты США могут требовать TOEFL, а некоторые в Европе - IELTS сертификат. <br> Оба теста состоят из 4
@@ -143,7 +208,7 @@
                             <div class="card-body">
                                 <p>Для успешной сдачи IELTS/TOEFL необходимо тщательно изучить формат экзамена и рекомендуется практиковаться каждый день. Поэтому, для покрытия большего количества материала за меньший срок, наши преподаватели фокусируются
                                     на разбор структуры секций и практику на уроке одинаковое количество времени. Практика реального теста задается на дом и на уроке разбираются непонятные моменты и эссе. Уроки также включают работу в группах. Например,
-                                    студенты будут читать сочинения друг друга, а потом будут давать комментарии.</p>
+                                    студенты будут читать сочинения друг друга, после чего будут давать комментарии.</p>
                                 <br>
                             </div>
                         </div>
@@ -160,14 +225,14 @@
                             <div class="card-body">
                                 <p>
                                     <ol>
-                                        <li><b>Уникальный учебный план. </b>Наши интерактивные классы помогут студентам легко запомнить структуру экзамена и все прилегающие детали, на которые стоит обращать внимания для успешной сдачи.
+                                        <li><b>Уникальный учебный план. </b>Наши интерактивные классы помогут студентам легко запомнить структуру экзамена и все прилегающие детали, на которые стоит обращать внимание для успешной сдачи.
                                         </li>
                                         <li>
                                             <b>Нестандартный подход.</b>Мы изначально выявляем пробелы ученика в знаниях английского и работаем над восполнением этих упущений.
 
                                         </li>
                                         <li>
-                                            <b>Постоянный контакт с родителями.</b>Мы всегда держим родителей о прогрессе их ребенка. Они будут знать как их ребенок выполняет домашние задания и как успешно усваивает материал.
+                                            <b>Постоянный контакт с родителями.</b>Мы всегда держим родителей в курсе прогресса их ребенка. Они будут знать как их ребенок выполняет домашние задания и как успешно усваивает материал.
 
                                         </li>
 
@@ -216,10 +281,10 @@
                             <div class="card-deck ">
 
 
-                                <div class="card bg-warning">
+                                <div class="card bg-light m-10">
                                     <div class="card-body text-center">
                                         <div class="container" max-height="350px">
-                                            <img class="rounded-circle" width="100%" src="images/Мохира Аташикова.JPEG" alt="Mokhira Atashikova">
+                                            <img class="rounded-circle" width="100%" src="images/mokhira.jpeg" alt="Mokhira Atashikova">
                                         </div>
 
 
@@ -232,15 +297,18 @@
 
                                     </div>
                                 </div>
-                                <div class="card bg-warning ">
+                                <div class="card bg-light">
                                     <div class="card-body text-center ">
                                         <div class="container m-10 " max-height="350px ">
-                                            <img class="rounded-circle " width="100% " src="# " alt="Dilnoza Abdurakhimova ">
+                                            <img class="rounded-circle " width="100% " src="images/mukaddam.jpg " alt="Mukaddam ">
                                         </div>
 
 
-                                        <h4 class="card-title ">Дильноза Абдурахимова</h4>
-                                        <p class="card-text ">Some example text.</p>
+                                        <h3 class="card-title ">Мукаддам Ханалиева</h3>
+                                        <p>
+                                            <em>преподаватель IELTS</em>
+                                        </p>
+                                        <p class="card-text ">Студент 3 курса Назарбаев Университета по специальности Политическая Наука и Международные Отношения. Обладатель знака «Алтын Белгi»</p>
 
 
                                     </div>
@@ -288,12 +356,12 @@
 
                                     </li>
                                     <li>
-                                        <b>Индивидуальный подход к каждому ученику.</b>Наша главная задача обеспечить каждого ученика нужными знаниями и навыками для поступления в Назарбаев Университет. Плюс к этому наши преподаватели помогут студентам
-                                        от регистрации на тестирование в Назарбаев Университет, до сдачи документов в сам университет после успешной сдачи экзамена.
+                                        <b>Индивидуальный подход к каждому ученику.</b>Наша главная задача обеспечить каждого ученика нужными знаниями и навыками для поступления в Назарбаев Университет. К тому же, наши преподаватели помогут студентам
+                                        от регистрации на тестирование в Назарбаев Университет до сдачи документов в сам университет после успешной сдачи экзамена.
 
                                     </li>
                                     <li>
-                                        <b>Закрепление каждого пройденного урока.</b> Уроки по подготовке к NUFYPET в QA начинаются с повторением пройденного материала и заканчиваются c закреплением новой темы.
+                                        <b>Закрепление каждого пройденного урока.</b> Уроки по подготовке к NUFYPET в QA начинаются с повторением пройденного материала и заканчиваются закреплением новой темы.
 
                                     </li>
                                 </ol>
@@ -343,11 +411,11 @@
                                 <div class="card bg-warning">
                                     <div class="card-body text-center">
                                         <div class="container" max-height="350px">
-                                            <img class="rounded-circle" width="100%" src="images/Умиджан Рахманкулов.jpg" alt="Umidzhan Rakhmankulov ">
+                                            <img class="rounded-circle" width="100%" src="images/umid.jpg" alt="Umidzhan Rakhmankulov ">
                                         </div>
 
 
-                                        <h3 class="card-title">Умиджон Рахманкулов</h3>
+                                        <h3 class="card-title">Умиджан Рахманкулов</h3>
                                         <p>
                                             <em>математика</em>
                                         </p>
@@ -359,13 +427,13 @@
                                 <div class="card bg-warning ">
                                     <div class="card-body text-center ">
                                         <div class="container m-10 " max-height="350px ">
-                                            <img class="rounded-circle " width="100% " src="images/Мафтуна Жорабекова.jpg" alt="Maftuna Zhorabekova">
+                                            <img class="rounded-circle " width="100% " src="images/maftuna.jpg" alt="Maftuna Zhorabekova">
                                         </div>
 
 
-                                        <h3 class="card-title ">Жорабекова Мафтуна</h3>
+                                        <h3 class="card-title ">Мафтуна Жорабекова</h3>
                                         <p><em>навыки мышления (критическое мышление)</em></p>
-                                        <p class="card-text ">Студент 2 курса Назарбаев Университета по специальности Лингвистика. <br> Обладатель знака «Алтын Белгi»</p>
+                                        <p class="card-text ">Студент 3 курса Назарбаев Университета по специальности Лингвистика. <br> Обладатель знака «Алтын Белгi»</p>
 
 
                                     </div>
@@ -391,8 +459,8 @@
                             <div class="card-body">
                                 <p>Сегодня мечта многих школьников – это поступление в НИШ. НИШ – это школы нового формата, где образовательные программы разработаны в соответствии современным моделям преподавания. Учеба в НИШ является некой путевкой в жизнь,
                                     так как в среднем выпускники НИШ имеют больше шансов учиться в лучших отечественных и зарубежных вузах. Поступить в НИШ достаточно сложно – даже преуспевающие учащиеся в общеобразовательных школах не проходят отбор.
-                                    Дело в том, что уроки в традиционных школах сильно отличаются от тех в НИШ, где большое значение уделяется на критическое и логическое мышления. Того же требуют задания на экзамене при поступлении в НИШ, поэтому чтобы
-                                    поступить в НИШ, необходима правильная и весьма серьёзная подготовка. По специально подготовленной программе подготовки к НИШ в Qwerty Academy мы подготовим вашего ребенка к успешной сдаче экзаменов – они научатся основным
+                                    Дело в том, что уроки в традиционных школах сильно отличаются от тех в НИШ, где большое значение уделяется на критическое и логическое мышления. Того же требуют задания на экзамене при поступлении в эту школу, поэтому
+                                    чтобы поступить, необходима правильная и весьма серьёзная подготовка. По специально подготовленной программе подготовки к НИШ в Qwerty Academy мы подготовим вашего ребенка к успешной сдаче экзаменов – они научатся основным
                                     методам прохождения экзаменов и в короткое время получат большой объем знаний по математике и английскому языку.
                                 </p>
                                 <br>
@@ -447,7 +515,7 @@
                                 <div class="card bg-warning ">
                                     <div class="card-body text-center ">
                                         <div class="container m-10 " max-height="350px ">
-                                            <img class="rounded-circle " width="100% " src="images/Умиджан Рахманкулов.jpg" alt="Умиджан Рахманкулов">
+                                            <img class="rounded-circle " width="100% " src="images/umid.jpg" alt="Умиджан Рахманкулов">
                                         </div>
 
 
@@ -462,26 +530,30 @@
                                 <div class="card bg-warning ">
                                     <div class="card-body text-center ">
                                         <div class="container m-10 " max-height="350px ">
-                                            <img class="rounded-circle " width="100% " src="#" alt="Nigara">
+                                            <img class="rounded-circle " width="100% " src="images/adkham.jpg" alt="Adkham">
                                         </div>
 
 
-                                        <h3 class="card-title ">Нигара Юнусова</h3>
-                                        <p><em>английский язык</em></p>
-                                        <p class="card-text ">текст</p>
+                                        <h3 class="card-title ">Адхамжон Юлдашов</h3>
+                                        <p><em>Математика и количественные характеристики</em></p>
+                                        <p class="card-text ">Студент 3 курса Назарбаев Университета по специальности Механическая и Аэрокосмическая Инженерия. <br> Обладатель знака «Алтын Белгi»</p>
 
 
                                     </div>
                                 </div>
+
+                            </div>
+                            <br>
+                            <div class="card-deck">
                                 <div class="card bg-warning ">
                                     <div class="card-body text-center ">
                                         <div class="container m-10 " max-height="350px ">
-                                            <img class="rounded-circle " width="100% " src="images/Алина Маркова.jpg" alt="Алина">
+                                            <img class="rounded-circle " width="100% " src="images/alina.jpg" alt="Алина">
                                         </div>
 
 
                                         <h3 class="card-title ">Алина Маркова</h3>
-                                        <p><em>русский язык</em></p>
+                                        <p><em>английский и русский языки</em></p>
                                         <p class="card-text ">Студент 3 курса Назарбаев Университета по специальности Лингвистика. <br> Обладатель знака «Алтын Белгi»</p>
 
 
@@ -490,7 +562,7 @@
                                 <div class="card bg-warning ">
                                     <div class="card-body text-center ">
                                         <div class="container m-10 " max-height="350px ">
-                                            <img class="rounded-circle " width="100% " src="images/Мукаддам Ханалиева.jpg" alt="Mukaddam">
+                                            <img class="rounded-circle " width="100% " src="images/mukaddam.jpg" alt="Mukaddam">
                                         </div>
 
 
@@ -501,6 +573,21 @@
 
                                     </div>
                                 </div>
+                                <div class="card bg-warning ">
+                                    <div class="card-body text-center ">
+                                        <div class="container m-10 " max-height="350px ">
+                                            <img class="rounded-circle " width="100% " src="images/karina.jpg" alt="Karina">
+                                        </div>
+
+
+                                        <h3 class="card-title ">Карина Абдимоминова</h3>
+                                        <p><em>английский и русский языки</em></p>
+                                        <p class="card-text ">Студент 2 курса Назарбаев Университета по специальности Политические Науки и Международные Отношения. <br> Обладатель знака «Алтын Белгi»</p>
+
+
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -555,7 +642,7 @@
                             <div class="card-body">
                                 <ol>
                                     <li>
-                                        <b>Уникальный учебный план.</b> Наши интерактивные классы помогут вам полюбить изучаемый предмет и получить большом объем знаний.
+                                        <b>Уникальный учебный план.</b> Наши интерактивные классы помогут вам полюбить изучаемый предмет и получить большой объем знаний.
 
                                     </li>
                                     <li>
@@ -563,7 +650,7 @@
 
                                     </li>
                                     <li>
-                                        <b>Постоянный контакт с родителями.</b>Мы всегда держим вас о прогрессе вашего ребенка. Вы будете знать, как он выполняет домашние задания и как успешно усваивает материал.
+                                        <b>Постоянный контакт с родителями.</b>Мы всегда держим вас в курсе о прогрессе вашего ребенка. Вы будете знать, как он выполняет домашние задания и как успешно усваивает материал.
 
                                     </li>
                                 </ol>
@@ -609,7 +696,7 @@
                                 <div class="card bg-warning ">
                                     <div class="card-body text-center ">
                                         <div class="container m-10 " max-height="350px ">
-                                            <img class="rounded-circle " width="100% " src="images/гульназ.jpg" alt="Gulnoza">
+                                            <img class="rounded-circle " width="100% " src="images/gulnaz.jpg" alt="Gulnoza">
                                         </div>
 
 
@@ -624,7 +711,7 @@
                                 <div class="card bg-warning ">
                                     <div class="card-body text-center ">
                                         <div class="container m-10 " max-height="350px ">
-                                            <img class="rounded-circle " width="100% " src="images/Адхамжон.jpg" alt="Adkham">
+                                            <img class="rounded-circle " width="100% " src="images/adkham.jpg" alt="Adkham">
                                         </div>
 
 
@@ -635,10 +722,29 @@
 
                                     </div>
                                 </div>
+
                                 <div class="card bg-warning ">
                                     <div class="card-body text-center ">
                                         <div class="container m-10 " max-height="350px ">
-                                            <img class="rounded-circle " width="100% " src="images/шахзод.jpg" alt="Shahzod">
+                                            <img class="rounded-circle " width="100% " src="images/maftuna.jpg" alt="Maftuna">
+                                        </div>
+
+
+                                        <h3 class="card-title ">Мафтуна Жорабекова</h3>
+                                        <p><em>математика</em></p>
+                                        <p class="card-text ">Студент 3 курса Назарбаев Университета по специальности Лингвистика. <br> Обладатель знака «Алтын Белгi»</p>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br>
+                            <div class="card-deck">
+                                <div class="card bg-warning ">
+                                    <div class="card-body text-center ">
+                                        <div class="container m-10 " max-height="350px ">
+                                            <img class="rounded-circle " width="100% " src="images/shokh.jpg" alt="Shahzod">
                                         </div>
 
 
@@ -649,15 +755,17 @@
 
                                     </div>
                                 </div>
+
+
                                 <div class="card bg-warning ">
                                     <div class="card-body text-center ">
                                         <div class="container m-10 " max-height="350px ">
-                                            <img class="rounded-circle " width="100% " src="images/Саидгаффор.jpg" alt="Said">
+                                            <img class="rounded-circle " width="100% " src="images/said.jpg" alt="Said">
                                         </div>
 
 
                                         <h3 class="card-title ">Саидгаффор Сабыров</h3>
-                                        <p><em>физика и математика</em></p>
+                                        <p><em>физика</em></p>
                                         <p class="card-text ">Студент 3 курса Назарбаев Университета по специальности Компьютерная Наука. <br> Обладатель знака «Алтын Белгi»</p>
 
 
@@ -731,7 +839,7 @@
                                 <div class="card bg-warning ">
                                     <div class="card-body text-center ">
                                         <div class="container m-10 " max-height="350px ">
-                                            <img class="rounded-circle " width="100% " src="images/гульназ.jpg" alt="Gulnoza">
+                                            <img class="rounded-circle " width="100% " src="images/gulnaz.jpg" alt="Gulnoza">
                                         </div>
 
 
@@ -746,7 +854,7 @@
                                 <div class="card bg-warning ">
                                     <div class="card-body text-center ">
                                         <div class="container m-10 " max-height="350px ">
-                                            <img class="rounded-circle " width="100% " src="images/Мукаддам Ханалиева.jpg" alt="Mukaddam">
+                                            <img class="rounded-circle " width="100% " src="images/mukaddam.jpg" alt="Mukaddam">
                                         </div>
 
 
@@ -757,14 +865,45 @@
 
                                     </div>
                                 </div>
+
+                                <div class="card bg-warning ">
+                                    <div class="card-body text-center ">
+                                        <div class="container m-10 " max-height="350px ">
+                                            <img class="rounded-circle " width="100% " src="images/umid.jpg" alt="Umid">
+                                        </div>
+
+
+                                        <h3 class="card-title ">Умиджан Рахманкулов</h3>
+                                        <p><em>Math I, Math II</em></p>
+                                        <p class="card-text ">Студент 4 курса Назарбаев Университета по специальности Экономика. <br> Обладатель знака «Алтын Белгi»</p>
+
+
+                                    </div>
+                                </div>
                             </div>
-                            <br>
+
                             <br>
                             <div class="card-deck">
                                 <div class="card bg-warning ">
                                     <div class="card-body text-center ">
                                         <div class="container m-10 " max-height="350px ">
-                                            <img class="rounded-circle " width="100% " src="images/шахзод.jpg" alt="Shahzod">
+                                            <img class="rounded-circle " width="100% " src="images/adkham.jpg" alt="Adkham">
+                                        </div>
+
+
+                                        <h3 class="card-title ">Адхамжон Юлдашов</h3>
+                                        <p><em>Math I, Math II</em></p>
+                                        <p class="card-text ">Студент 3 курса Назарбаев Университета по специальности Механическая и Аэрокосмическая Инженерия. <br> Обладатель знака «Алтын Белгi»</p>
+
+
+                                    </div>
+                                </div>
+
+
+                                <div class="card bg-warning ">
+                                    <div class="card-body text-center ">
+                                        <div class="container m-10 " max-height="350px ">
+                                            <img class="rounded-circle " width="100% " src="images/shokh.jpg" alt="Shahzod">
                                         </div>
 
 
@@ -777,8 +916,8 @@
                                 </div>
                                 <div class="card bg-warning ">
                                     <div class="card-body text-center ">
-                                        <div class="container m-10 " max-height="350px ">
-                                            <img class="rounded-circle " width="100% " src="images/Саидгаффор.jpg" alt="Said">
+                                        <div class="container m-10 " max-height="300px ">
+                                            <img class="rounded-circle " width="100% " src="images/said.jpg" alt="Said">
                                         </div>
 
 
@@ -796,10 +935,290 @@
 
 
                 </div>
+                <div class="englishKids" id="accordion">
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapse1">
+                                <h3>
+                                    Английский язык для детей
+                                </h3>
+                            </a>
+                        </div>
+                        <div id="collapse1" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>QWERTY Academy - это площадка, где каждый ребенок сможет учить английский язык в развлекательной и познавательной манерах. Когда занятия будут проходить в виде игр и развлечений, ребенку легко удается освоить и запомнить
+                                    материалы. В QWERTY Academy, ваш ребенок сможет правильно произносить слова, строить предложения, освоить базовую грамматику, и прочее другое. Также, наши лучшие преподаватели из практиков и профессионалов помогут вашему
+                                    ребенку справиться с интенсивностью школьной программы, четко и грамотно объясняя каждую тему.
 
+                                </p>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapse2">
+                                <h3>
+                                    Какие результаты ожидают ваших детей после обучения?
+                                </h3>
+                            </a>
+                        </div>
+                        <div id="collapse2" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <ul>
+                                    <li><b>Самооценка</b> <br> На занятиях ребята научатся не только правильно говорить по-английски и грамотно строить предложения, но и получат ряд важных коммуникационных умений, в частности, освоят искусство публичного
+                                        выступления и перестанут бояться самостоятельно начинать общение. <br><br>
+                                    </li>
+                                    <li><b>Подготовка к жизни в обществе</b><br> Работая в команде, малыши учатся общаться, находить друзей и принимать самостоятельные решения. Приобретенные навыки взаимодействия с другими людьми заложат основы для комфортного
+                                        общения человека в любом коллективе <br> <br>
+                                    </li>
+                                    <li><b>Новые навыки</b><br> На занятиях дети не только учатся читать, писать, разговаривать, а главное – думать на английском, но и усваивают такие важные навыки как умение работать в команде и способность адекватно оценивать
+                                        собственные силы.</li>
+
+                                </ul>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#">
+                                <h3>
+                                    Преподаватели программы
+                                </h3>
+                            </a>
+                        </div>
+                        <br>
+                        <div id="collapse3" class="collapse show" data-parent="#accordion">
+                            <div class="card-deck">
+                                <div class="card bg-warning ">
+                                    <div class="card-body text-center ">
+                                        <div class="container m-10 " max-height="350px ">
+                                            <img class="rounded-circle " width="100% " src="images/alina.jpg" alt="Alina">
+                                        </div>
+
+
+                                        <h3 class="card-title ">Алина Маркова</h3>
+                                        <p><em>английский язык</em></p>
+                                        <p class="card-text ">Студент 3 курса Назарбаев Университета по специальности Лингвистика. <br> Обладатель знака «Алтын Белгi»</p>
+
+
+                                    </div>
+                                </div>
+
+
+                                <div class="card bg-warning ">
+                                    <div class="card-body text-center ">
+                                        <div class="container m-10 " max-height="350px ">
+                                            <img class="rounded-circle " width="100% " src="images/karina.jpg" alt="Karina">
+                                        </div>
+
+
+                                        <h3 class="card-title ">Карина Абдимоминова</h3>
+                                        <p><em>английский язык</em></p>
+                                        <p class="card-text ">Студент 2 курса Назарбаев Университета по специальности Политические Науки и Международные Отношения. <br> Обладатель знака «Алтын Белгi»</p>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="englishAdults" id="accordion">
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapse1">
+                                <h3>
+                                    Английский язык для взрослых
+                                </h3>
+                            </a>
+                        </div>
+                        <div id="collapse1" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Английский язык является обязательным предметом в школах и университетах по всему миру. Большинство молодых людей знают и даже свободно владеют английским языком. Однако, есть категория взрослых людей, которые в школе не
+                                    изучали данный язык. И эта категория часто задаются вопросом: “Нужно ли учить английский для взрослых?”. Наш ответ очевиден: “Да!”. Английский язык для взрослых, открывает массу возможностей в карьере, в путешествиях,
+                                    в бизнесе и других сферах. Курсы английского языка для взрослых помогают слушателям разобраться во всех возможных ситуациях, начиная от бытовых вопросов, заканчивая семейными путешествиями за границу. Можно годами учить
+                                    язык, но не разговаривать на нем, QWERTY Academy полностью нацелена научить вас практически применить английский язык в жизни. QWERTY Academy поможет вам овладеть язык в совершенстве, независимо от уровня вашего английского
+                                    языка
+
+                                </p>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapse2">
+                                <h3>
+                                    Почему стоит учиться в QWERTY Academy?
+                                </h3>
+                            </a>
+                        </div>
+                        <div id="collapse2" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <ol>
+                                    <li>
+                                        Нестандартный подход обучения
+                                    </li>
+                                    <li>
+                                        Своевременное тестирование после каждой темы на проверку усвоения пройденного материала
+                                    </li>
+                                    <li>
+                                        Детально-разработанный учебный план
+                                    </li>
+
+                                </ol>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapse3">
+                                <h3>
+                                    Закончив полный курс английского языка, студент QWERTY Academy сможет:
+                                </h3>
+                            </a>
+                        </div>
+                        <div id="collapse3" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <ol>
+                                    <li>
+                                        Свободно излагать свои мысли
+                                    </li>
+                                    <li>
+                                        Грамотно писать и понимать тексты
+                                    </li>
+                                    <li>
+                                        Поддерживать беседу на различные темы
+                                    </li>
+                                    <li>
+                                        Проходить собеседования на английском языке
+                                    </li>
+                                    <li>
+                                        Смотреть фильмы и читать тексты на английском языке
+                                    </li>
+                                    <li>
+                                        Заполнять документы, резюме, анкеты
+                                    </li>
+
+                                </ol>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapse4">
+                                <h3>
+                                    Какие уровни английского языка предусматриваются:
+                                </h3>
+                            </a>
+                        </div>
+                        <div id="collapse4" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Уровень</th>
+                                            <th>Описание</th>
+                                            <th>Курс</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><b>Beginner</b></td>
+                                            <td>Учащиеся этого уровня познакомятся с базовыми элементами речи и письма на английском языке</td>
+                                            <td>3 месяца</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Elementary</b></td>
+                                            <td>Студенты этой ступени научатся читать короткие адаптированные тексты и писать простые предложения, вести диалог на базовые темы, рассказывать о себе. Вы начнете понимать англоязычного собеседника.</td>
+                                            <td>3 месяца</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Pre-Intermediate</b></td>
+                                            <td>Вы сможете общаться на «простом» английском и понять собеседника в знакомой вам ситуации.</td>
+                                            <td>3 месяца</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Intermediate</b></td>
+                                            <td>Вы сможете вполне хорошо говорить и понимать речь на слух и выражать свои мысли при помощи простых предложений, понимая более сложные грамматические конструкции и лексику.</td>
+                                            <td>4 месяца</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Upper-Intermediate</b></td>
+                                            <td>Вы научитесь хорошо говорить и понимать английскую речь на слух с допущением маленьких ошибок</td>
+                                            <td>4 месяца</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Advanced</b></td>
+                                            <td>Вы сможете полноценно объяснять свои мысли и понимать мысли собеседника на английском языке.</td>
+                                            <td>5 месяцев</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#">
+                                <h3>
+                                    Преподаватели программы
+                                </h3>
+                            </a>
+                        </div>
+                        <br>
+                        <div id="collapse3" class="collapse show" data-parent="#accordion">
+                            <div class="card-deck">
+                                <div class="card bg-warning ">
+                                    <div class="card-body text-center ">
+                                        <div class="container m-10 " max-height="350px ">
+                                            <img class="rounded-circle " width="100% " src="images/maftuna.jpg" alt="Maftuna">
+                                        </div>
+
+
+                                        <h3 class="card-title "> Мафтуна Жорабекова</h3>
+                                        <p><em>английский язык</em></p>
+                                        <p class="card-text ">Студент 3 курса Назарбаев Университета по специальности Лингвистика. <br> Обладатель знака «Алтын Белгi»</p>
+
+
+                                    </div>
+                                </div>
+
+
+                                <div class="card bg-warning ">
+                                    <div class="card-body text-center ">
+                                        <div class="container m-10 " max-height="350px ">
+                                            <img class="rounded-circle " width="100% " src="images/mukaddam.jpg" alt="Mukaddam">
+                                        </div>
+
+
+                                        <h3 class="card-title ">Мукаддам Ханалиева</h3>
+                                        <p><em>английский язык</em></p>
+                                        <p class="card-text ">Студент 3 курса Назарбаев Университета по специальности Политическая Наука и Международные Отношения. <br> Обладатель знака «Алтын Белгi»</p>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
             </div>
             <div class="col-sm-12 col-lg-3 container " style='background: #DFE0DF;'>
-                <div class="container-fluid right">
+                <div class="right">
                     <br>
                     <h3>Курс обучения
                     </h3>
@@ -808,30 +1227,30 @@
 
                     <article class="ielts">
                         <ul>
-                            <li>Тестирование знаний: <b><button class="btn btn-info inline" disabled>каждые две недели</button></b>
+                            <li>Тестирование знаний: <b>каждые две недели</b>
                                 <br>
-                                <p class="blockquote-footer ">родители получают отчет об успеваемости.</p>
+
                             </li>
                             <hr>
-                            <li>Продолжительность занятий: <b><button class="btn btn-info inline" disabled>90 минут</button></b>
+                            <li>Продолжительность занятий: <b>90 минут</b>
                             </li>
                             <hr>
-                            <li>Язык преподавания: <b><button class="btn btn-info inline " disabled>английский</button></b></li>
+                            <li>Язык преподавания: <b>английский</b></li>
                         </ul>
                     </article>
                     <article class="nufypet ">
                         <ul>
-                            <li>Тестирование знаний: <b>после каждой пройденной темы</b>
+                            <li>Тестирование знаний <b>после каждой пройденной темы</b>
                             </li>
                             <hr>
                             <li>
                                 Продолжительность курса: <b>7 месяцев (август-февраль)</b>
                             </li>
                             <hr>
-                            <li>Продолжительность занятий: <b>120 минут</b></li>
+                            <li>Продолжительность занятий: <b>80 минут</b></li>
                             <hr>
-                            <li>Язык преподавания: <b>английский </b><br>
-                                <p class="blockquote-footer ">При желании студента возможно и в других доступных языках.</p>
+                            <li>Язык преподавания: <b>английский, русский</b><br>
+
                             </li>
                         </ul>
                     </article>
@@ -873,7 +1292,7 @@
                         <ul>
                             <li>Тестирование знаний: <b>каждые две недели</b>
                                 <br>
-                                <p class="blockquote-footer ">родители получают отчет об успеваемости.</p>
+
                             </li>
                             <hr>
                             <li>Продолжительность занятий: <b>80 минут</b>
@@ -885,7 +1304,7 @@
                     </article>
                     <article class="sat ">
                         <ul>
-                            <li>Длительность обученя: <b>6 месяцев (с августа по январь)</b>
+                            <li>Длительность обучения: <b>6 месяцев (с августа по январь)</b>
                             </li>
                             <hr>
                             <li>Пробное тестирование: <b>каждые две недели</b>
@@ -893,18 +1312,93 @@
                             <hr>
 
                             <li>Расписание занятий: <b>3 раза в неделю по каждому предмету</b></li>
+                            <hr>
                             <li>
                                 Продолжительность занятий: <b>90 минут</b>
                             </li>
+                            <hr>
                             <li>Языки преподавания: <b>русский, английский</b>
                             </li>
                         </ul>
-                    </article><button class="btn btn-danger">Записаться</button>
+                    </article>
+                    <article class="englishKids ">
+                        <ul>
+                            <li>Длительность обучения: <b>см. в таблице в разделе "Английский для взрослых"</b>
+                            </li>
+                            <hr>
+
+
+                            <li>Расписание занятий: <b>3 раза в неделю по каждому предмету</b></li>
+                            <hr>
+                            <li>
+                                Продолжительность занятий: <b>90 минут</b>
+                            </li>
+
+                        </ul>
+                    </article>
+                    <article class="englishAdults ">
+                        <ul>
+                            <li>Длительность обучения: <b>см. в таблице</b>
+                            </li>
+                            <hr>
+
+
+                            <li>Расписание занятий: <b>3 раза в неделю по каждому предмету</b></li>
+                            <hr>
+                            <li>
+                                Продолжительность занятий: <b>90 минут</b>
+                            </li>
+                            <hr>
+                            <!-- onclick='window.location.href="https:\\bit.ly/2OhKaQZ"' -->
+                        </ul>
+                    </article><button class="btn btn-danger fixed">Записаться</button>
                 </div>
 
             </div>
         </div>
     </div>
+    <footer id="footer">
+        <div id="footer-contents">
+            <div>
+                <br>
+                <img src="images/logo3.png" id="footerLogo">
+            </div>
+            <div id="contacts">
+                <div>
+                    <br>
+                    <h4><b>Контакты</b></h4>
+                </div>
+                <div>
+                    <div id="contactInfo">
+                        <div id="contactInfoWrap">
+                            <h5>+7 (747) 739 83 01</h5>
+                            <h5>+7 (747) 485 15 84</h5>
+                            <!--                                    <h5>qwerty-academy@gmail.com</h5>-->
+                        </div>
+                    </div>
+
+                    <div id="socialNet">
+                        <a class="social" href="https://bit.ly/2OhKaQZ">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a class="social" href="#">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a class="social" href="https://www.instagram.com/qwerty_academy/">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="social" href="#">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <h6>Qwerty Academy. 2020 &copy;</h6>
+    </footer>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js "></script>
 </body>
 
